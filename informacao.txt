@@ -1,0 +1,7 @@
+a interação que utilizei foi a resizable numa textarea na pagina addCurso.php
+
+o widget que utilizei foi o accordion na pagina principal
+
+o efeito que utilizei foi o show('slide') que so consegui por a funcinar quando se clica na primeira 
+vez em qualquer link das imagens que estao na pagina da galeria
+

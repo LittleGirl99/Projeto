@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Galeria</title>
+        <link rel="stylesheet" type="text/css" href="css/GaleriaStyles.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">       
+	</head>
+	<body>
+		<center>
+			<div>
+				<h1>Galeria</h1>	
+			</div>
+		</center>
+		<a id="refresh" href="galeria.html" style="position: absolute;top: 4%;left: 7%;"><img src="imagens/refresh.png"></a>
+		<div>
+		<div id='menu'>
+			<center>
+				<a href="#">Imagem 1</a>
+				<a href="#">Imagem 2</a>
+				<a href="#">Imagem 3</a>
+				<a href="#">Imagem 4</a>
+				<a href="#">Imagem 5</a>
+			</center>
+		</div>
+		<div id="container">
+			<center>
+				<div id='position'>
+					<p>
+						<img src="imagens/tgpsi.png" alt="Imagem 1">
+					</p>
+					<p class="caption">Técnico de Gestão e Programação de Sistemas Informáticos</p>
+				</div>
+			</center>
+		</div>
+		<a id="back" href="index1.php"><img src="imagens/back.jpg"></a>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script >
+
+			$(function() {
+            	
+            	function runEffect() {
+               		// run the effect
+               		$( "#position" ).show( "slide");
+            	};
+            
+           		
+            	function callback() {
+               	setTimeout(function() {
+                  $( "#position:visible" ).removeAttr( "style" ).fadeOut();
+                }, 1000 );
+            };
+            $( "#position" ).hide();
+
+
+			var $pictures, $menu_links= $('#menu a'), $title=$('title'), $image = $('#container img'), $caption=$('#container .caption');
+			$.ajax({
+				url: "XML/imagens.xml",
+				success: function(data){
+					$pictures= $('picture',data);
+				}
+			});
+			$menu_links.click(function(){
+				runEffect();
+				var index =$menu_links.index(this);
+				var $picture = $pictures.filter(":eq("+ index + ")");
+				$caption.text($picture.attr("caption"));
+				$image.attr("src",$picture.attr("source"));
+				$title.text("Galeria - " + $picture.attr("caption"));
+				//$title.text('fgd - ');
+				//alert('ola');
+				
+				return false;
+			});
+
+         });
+	        /*$('#menu a').click(function(){
+				$('#container').load(this.href + "#container #position");
+				return false;
+			});*/
+        </script>
+	</body>
+</html>

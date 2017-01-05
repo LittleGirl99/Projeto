@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pictures>
+	<picture caption='Imagem 1' source='imagens/infancia.jpg'/>
+	<picture caption='Imagem 2' source='imagens/saude.jpg'/>
+	<picture caption='Imagem 3' source='imagens/gestao.jpg'/>
+	<picture caption='Imagem 4' source='imagens/vendas.jpg'/>
+	<picture caption='Imagem 5' source='imagens/tgpsi.png'/>
+</pictures>

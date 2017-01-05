@@ -1,0 +1,44 @@
+#menu
+{
+	border: 2px solid;
+	width: 13%;
+	padding-bottom: 1%;
+	padding-top: 1%;
+	background: #e6e6e6;
+	position: absolute;
+	top:25%;
+	left: 5%;
+}
+#menu a
+{
+	display: block;
+}
+#container
+{
+	border: 2px solid;
+	background: #e6e6e6;
+	width: 50%;
+	height: 70%;
+	position: absolute;
+	left: 25%;
+	right: 25%;
+	top:20%;
+	bottom: 15%;
+}
+#position
+{
+	position: absolute;
+	top: 20%;
+	bottom: 20%;
+	left: 20%;
+	right: 20%;
+}
+#back:hover,#back:link,#black:active,#black:visited
+{
+	text-decoration: none;
+}
+#back
+{
+	position: absolute;
+	top: 4%;
+}
