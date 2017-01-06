@@ -12,7 +12,7 @@
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     </head>
     <body>
-        <!--Titulo-->                                         
+        <!--Comentario-->                                         
         <div id="title" >
             <h1>Cursos Profissionais</h1>
         </div>
